@@ -1,12 +1,50 @@
-$font-stack:    'Noto Sans', sans-serif
+/* Variables */
+
+/* Fonts */
+$font-titles: 'Noto Sans', sans-serif
+$font-body: 'Noto Serif', serif
+$font-quotes: 'Gentium Basic', serif
+
+/* Colors */
 $primary-color: #333
+$link-color: #006fc6
+$highlight-color: #f0f0f0
 
-html
-  font: 100% $font-stack
+/* Spacing */
+$margin-standard: 20px
+$padding-standard: 20px
 
+/* Styles */
 body
-  font: 100% $font-stack
   color: $primary-color
-
-p
-  font: 100% $font-stack
+  h1,h2,h3,h4,h5,h6
+    font-family: $font-titles
+  p
+    font: 1.1em $font-body
+  ul
+    li
+      font: 1.0em $font-body
+  a
+    color: $link-color
+    text-decoration: none
+    &.home
+      font-size: 1.3em
+      color: $link-color
+  div
+    &.container
+      margin: $margin-standard auto $margin-standard auto
+    &.header
+      border-bottom: 2px solid #555
+      vertical-align: bottom
+      margin-top: $margin-standard
+      margin-bottom: $margin-standard
+    &.highlight
+      background-color: $highlight-color
+      padding: $padding-standard
+  blockquote
+    font: 1.5em $font-quotes
+    font-style: italic
+    width: 80%
+    margin-left: auto
+    margin-right: auto
+    margin-bottom: 2*$margin-standard
