@@ -8,7 +8,7 @@ $font-quotes: 'Gentium Basic', serif
 /* Colors */
 $primary-color: #333
 $link-color: #006fc6
-$highlight-color: #f0f0f0
+$highlight-color: #e9e9d2
 
 /* Spacing */
 $margin-standard: 20px
@@ -28,7 +28,7 @@ body
     color: $link-color
     text-decoration: none
     &.home
-      font-size: 1.3em
+      font-size: 1.9em
       color: $link-color
   div
     &.container
@@ -36,11 +36,12 @@ body
     &.header
       border-bottom: 2px solid #555
       vertical-align: bottom
-      margin-top: $margin-standard
       margin-bottom: $margin-standard
     &.highlight
       background-color: $highlight-color
       padding: $padding-standard
+      margin-bottom: 2*$margin-standard
+      margin-top: 2*$margin-standard
   blockquote
     font: 1.5em $font-quotes
     font-style: italic
@@ -48,3 +49,4 @@ body
     margin-left: auto
     margin-right: auto
     margin-bottom: 2*$margin-standard
+    margin-top: 2*$margin-standard

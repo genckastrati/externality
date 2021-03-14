@@ -20,7 +20,7 @@ body a {
   text-decoration: none;
 }
 body a.home {
-  font-size: 1.3em;
+  font-size: 1.9em;
   color: #006fc6;
 }
 body div.container {
@@ -29,12 +29,13 @@ body div.container {
 body div.header {
   border-bottom: 2px solid #555;
   vertical-align: bottom;
-  margin-top: 20px;
   margin-bottom: 20px;
 }
 body div.highlight {
-  background-color: #f0f0f0;
+  background-color: #e9e9d2;
   padding: 20px;
+  margin-bottom: 40px;
+  margin-top: 40px;
 }
 body blockquote {
   font: 1.5em "Gentium Basic", serif;
@@ -43,6 +44,7 @@ body blockquote {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 40px;
+  margin-top: 40px;
 }
 
 /*# sourceMappingURL=externality.css.map */
