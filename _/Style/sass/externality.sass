@@ -1,27 +1,37 @@
 /* Variables */
 
 /* Fonts */
-$font-titles: 'Noto Sans', sans-serif
+$font-heading: 'Noto Sans', sans-serif
 $font-body: 'Noto Serif', serif
 $font-quotes: 'Gentium Basic', serif
 $font-weight-standard: 500
+$font-weight-strong: 700
 
 /* Colors */
 $primary-color: #333
 $link-color: #006fc6
-$highlight-color: #424242
+$highlight-color: #787878
 $inverted-color: #fff
 $inverted-link-color: #a6a6a6
 
 /* Spacing */
-$margin-standard: 20px
-$padding-standard: 20px
+$margin-standard: 0.5rem
+$padding-standard: 0.5rem
 
 /* Styles */
+html
+  height: 100%
+  margin: 0
+
 body
+  height: 100%
+  margin: 0
+  display: flex
+  justify-content: center
+  flex-direction: column
   color: $primary-color
   h1,h2,h3,h4,h5,h6
-    font-family: $font-titles
+    font-family: $font-heading
     font-weight: $font-weight-standard
   p
     font: 1.1em $font-body
@@ -31,34 +41,27 @@ body
   a
     color: $link-color
     text-decoration: underline
-    &.home
-      font-size: 1.9em
-      color: $link-color
-      width: 100%
-      height: 100%
-      display: block
+    
   div
     &.container
-      margin: $margin-standard auto $margin-standard auto
-    &.header
-      background-image: url('/_/Images/nepal.png')
-      background-size: cover
-      background-position: center center
-      margin-bottom: $margin-standard
-      height: 20%
-    &.highlight
-      background-color: $highlight-color
-      padding: $padding-standard
-      margin-bottom: 2*$margin-standard
-      margin-top: 2*$margin-standard
-      color: $inverted-color
-      a
-        color: $inverted-link-color
-  blockquote
-    font: 1.5em $font-quotes
-    font-style: italic
-    width: 80%
-    margin-left: auto
-    margin-right: auto
-    margin-bottom: 2*$margin-standard
-    margin-top: 2*$margin-standard
+      margin: 0 auto 0 auto
+      width: 100%
+      text-align: center
+
+      .panels
+        a.panel
+          color: $inverted-color
+          text-decoration: none
+          text-transform: lowercase
+          font-weight: $font-weight-strong
+          text-align: left
+          font-family: $font-heading
+          display: inline-block
+          background-color: $highlight-color
+          width: 120px
+          height: 120px
+          margin: $margin-standard
+          padding: $padding-standard
+
+          &::before
+            content: "."
