@@ -1,6 +1,8 @@
 /* Variables */
 
 /* Fonts */
+$font-size-standard: 0.9rem
+$font-size-heading: 1.4rem
 $font-heading: 'Noto Sans', sans-serif
 $font-body: 'Noto Serif', serif
 $font-quotes: 'Gentium Basic', serif
@@ -16,20 +18,20 @@ $inverted-link-color: #a6a6a6
 
 /* Spacing */
 $margin-standard: 0.5rem
+$margin-large: 1.5rem
 $padding-standard: 0.5rem
 
 /* Styles */
 html
   height: 100%
   margin: 0
+  font-size: $font-size-standard
 
 body
   height: 100%
   margin: 0
-  display: flex
-  justify-content: center
-  flex-direction: column
   color: $primary-color
+  
   h1,h2,h3,h4,h5,h6
     font-family: $font-heading
     font-weight: $font-weight-standard
@@ -43,12 +45,31 @@ body
     text-decoration: underline
     
   div
+    &.header
+      padding: $padding-standard
+      height: 5%
+      position: fixed
+      text-align: right
+      .timer
+        font-family: $font-heading
+
+    &.footer 
+      padding: $padding-standard
+      height: 5%
+      position: fixed
+      
     &.container
+      display: flex
+      justify-content: center
+      flex-direction: column
+      height: 100%
       margin: 0 auto 0 auto
       width: 100%
       text-align: center
 
       .panels
+        font-size: $font-size-heading
+
         a.panel
           color: $inverted-color
           text-decoration: none
@@ -58,10 +79,20 @@ body
           font-family: $font-heading
           display: inline-block
           background-color: $highlight-color
-          width: 120px
-          height: 120px
+          width: 150px
+          height: 150px
           margin: $margin-standard
           padding: $padding-standard
 
           &::before
             content: "."
+
+      .contact
+        margin: $margin-large
+        a.link
+          color: $primary-color
+          margin: 0 $margin-large 0 $margin-large
+          text-decoration: none
+          text-transform: lowercase
+          font-family: $font-heading
+          font-weight: $font-weight-strong

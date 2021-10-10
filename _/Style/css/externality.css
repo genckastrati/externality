@@ -6,14 +6,12 @@
 html {
   height: 100%;
   margin: 0;
+  font-size: 0.9rem;
 }
 
 body {
   height: 100%;
   margin: 0;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
   color: #333;
 }
 body h1, body h2, body h3, body h4, body h5, body h6 {
@@ -30,10 +28,31 @@ body a {
   color: #006fc6;
   text-decoration: underline;
 }
+body div.header {
+  padding: 0.5rem;
+  height: 5%;
+  position: fixed;
+  text-align: right;
+}
+body div.header .timer {
+  font-family: "Noto Sans", sans-serif;
+}
+body div.footer {
+  padding: 0.5rem;
+  height: 5%;
+  position: fixed;
+}
 body div.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
   margin: 0 auto 0 auto;
   width: 100%;
   text-align: center;
+}
+body div.container .panels {
+  font-size: 1.4rem;
 }
 body div.container .panels a.panel {
   color: #fff;
@@ -44,13 +63,24 @@ body div.container .panels a.panel {
   font-family: "Noto Sans", sans-serif;
   display: inline-block;
   background-color: #787878;
-  width: 120px;
-  height: 120px;
+  width: 150px;
+  height: 150px;
   margin: 0.5rem;
   padding: 0.5rem;
 }
 body div.container .panels a.panel::before {
   content: ".";
+}
+body div.container .contact {
+  margin: 1.5rem;
+}
+body div.container .contact a.link {
+  color: #333;
+  margin: 0 1.5rem 0 1.5rem;
+  text-decoration: none;
+  text-transform: lowercase;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 700;
 }
 
 /*# sourceMappingURL=externality.css.map */
