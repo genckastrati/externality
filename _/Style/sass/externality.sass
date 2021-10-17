@@ -26,20 +26,28 @@ html
   height: 100%
   margin: 0
   font-size: $font-size-standard
-
+  
 body
+  font-family: $font-heading
   height: 100%
   margin: 0
   color: $primary-color
+
+  display: flex
+  justify-content: center
+  flex-direction: column
+  flex-wrap: nowrap
+  align-items: stretch
+  flex: 1 100%
   
   h1,h2,h3,h4,h5,h6
     font-family: $font-heading
     font-weight: $font-weight-standard
   p
-    font: 1.1em $font-body
+    //font: 2.1em $font-body
   ul
     li
-      font: 1.0em $font-body
+      //font: 2.0em $font-body
   a
     color: $link-color
     text-decoration: underline
@@ -47,24 +55,47 @@ body
   div
     &.header
       padding: $padding-standard
-      height: 5%
-      position: fixed
-      text-align: right
+      display: flex
+      
       .timer
         font-family: $font-heading
+        width: 50%
+        text-align: right
+
+      .home
+        font-family: $font-heading
+        width: 50%
+        text-align: left
+
+        a
+          font-weight: $font-weight-strong
+          text-decoration: none
+          color: $highlight-color
+          
+          &:hover
+            color: $primary-color
 
     &.footer 
       padding: $padding-standard
-      height: 5%
-      position: fixed
+      display: flex
+      .easter-egg
+        width: 50%
+        text-align: left
+
+        a
+          color: $highlight-color
+      
+      .legal
+        width: 50%
+        text-align: right
+
       
     &.container
+      height: 100%
       display: flex
       justify-content: center
       flex-direction: column
-      height: 100%
       margin: 0 auto 0 auto
-      width: 100%
       text-align: center
 
       .panels
@@ -83,6 +114,9 @@ body
           height: 150px
           margin: $margin-standard
           padding: $padding-standard
+
+          &:hover
+            background-color: $primary-color
 
           &::before
             content: "."

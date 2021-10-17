@@ -10,19 +10,20 @@ html {
 }
 
 body {
+  font-family: "Noto Sans", sans-serif;
   height: 100%;
   margin: 0;
   color: #333;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  flex: 1 100%;
 }
 body h1, body h2, body h3, body h4, body h5, body h6 {
   font-family: "Noto Sans", sans-serif;
   font-weight: 500;
-}
-body p {
-  font: 1.1em "Noto Serif", serif;
-}
-body ul li {
-  font: 1em "Noto Serif", serif;
 }
 body a {
   color: #006fc6;
@@ -30,25 +31,47 @@ body a {
 }
 body div.header {
   padding: 0.5rem;
-  height: 5%;
-  position: fixed;
-  text-align: right;
+  display: flex;
 }
 body div.header .timer {
   font-family: "Noto Sans", sans-serif;
+  width: 50%;
+  text-align: right;
+}
+body div.header .home {
+  font-family: "Noto Sans", sans-serif;
+  width: 50%;
+  text-align: left;
+}
+body div.header .home a {
+  font-weight: 700;
+  text-decoration: none;
+  color: #787878;
+}
+body div.header .home a:hover {
+  color: #333;
 }
 body div.footer {
   padding: 0.5rem;
-  height: 5%;
-  position: fixed;
+  display: flex;
+}
+body div.footer .easter-egg {
+  width: 50%;
+  text-align: left;
+}
+body div.footer .easter-egg a {
+  color: #787878;
+}
+body div.footer .legal {
+  width: 50%;
+  text-align: right;
 }
 body div.container {
+  height: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height: 100%;
   margin: 0 auto 0 auto;
-  width: 100%;
   text-align: center;
 }
 body div.container .panels {
@@ -67,6 +90,9 @@ body div.container .panels a.panel {
   height: 150px;
   margin: 0.5rem;
   padding: 0.5rem;
+}
+body div.container .panels a.panel:hover {
+  background-color: #333;
 }
 body div.container .panels a.panel::before {
   content: ".";
