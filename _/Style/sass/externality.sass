@@ -115,7 +115,7 @@ body
           margin: $margin-standard
           padding: $padding-standard
 
-          &:hover
+          &:hover 
             background-color: $primary-color
 
           &::before
@@ -130,3 +130,28 @@ body
           text-transform: lowercase
           font-family: $font-heading
           font-weight: $font-weight-strong
+    
+    &.playground
+      height: 100%
+      text-align: left
+
+      .folder
+        font-size: $font-size-heading
+        width: 150px
+        height: 150px
+        border: 1px solid $inverted-color
+        background-color: $primary-color
+        //margin: $margin-standard
+        padding: $padding-standard
+        display: inline-block
+
+        a
+          color: $inverted-color
+          text-decoration: none
+          text-transform: lowercase
+          font-weight: $font-weight-strong
+          text-align: left
+          font-family: $font-heading
+          display: inline-block
+          
+          

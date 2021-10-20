@@ -108,5 +108,27 @@ body div.container .contact a.link {
   font-family: "Noto Sans", sans-serif;
   font-weight: 700;
 }
+body div.playground {
+  height: 100%;
+  text-align: left;
+}
+body div.playground .folder {
+  font-size: 1.4rem;
+  width: 150px;
+  height: 150px;
+  border: 1px solid #fff;
+  background-color: #333;
+  padding: 0.5rem;
+  display: inline-block;
+}
+body div.playground .folder a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: lowercase;
+  font-weight: 700;
+  text-align: left;
+  font-family: "Noto Sans", sans-serif;
+  display: inline-block;
+}
 
 /*# sourceMappingURL=externality.css.map */
