@@ -4,13 +4,25 @@
     <title>externality.ch</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!--<link rel="stylesheet" href="/_/Frameworks/Bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="/_/Frameworks/Bootstrap/js/bootstrap.min.js" />-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Gentium+Basic&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/_/Style/css/externality.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script>
+        $.getJSON("toys.json", function(json) {
+            const sandbox = document.getElementById("sandbox");
+            
+            for(const item of json){
+                var folder = document.createElement("div");
+                folder.className = "folder";
+                folder.innerHTML = "<a href='" + item + "'>'" + item + "'</a>";
+                sandbox.appendChild(folder);
+            }
+        });
+    </script>
 </head>
 
 <body>
@@ -22,20 +34,9 @@
             00:00
         </div>
     </div>
-    <div class="container">
-        <div class="panels">
-            <a class="panel" href="https://github.com/genckastrati">Projects</a>
-            <a class="panel" href="/playground">Playground</a>
-            <a class="panel" href="https://read.externality.ch">Reading</a>
-        </div>
-        <div class="contact">
-            ■
-            <a class="link" href="https://www.linkedin.com/in/genckastrati">ln</a>
-            <a class="link" href="https://twitter.com/iamghentz">tw</a>
-            <a class="link" href="genckastrati≡gmail">@</a>
-            <a class="link" href="https://github.com/genckastrati">git</a>
-            ■
-        </div>
+    <div id="sandbox" class="playground">
+        
+        
     </div>
     <div class="footer">
         <div class="easter-egg">
